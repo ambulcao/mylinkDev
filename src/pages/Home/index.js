@@ -5,7 +5,7 @@ export default function Home(){
     return(
       <div className="container-home">
         <div className="logo">
-            <img src="../../assets/pitu2.jpeg" alt="Logo Pitu v2" />
+            <img src="../../assets/pitu2.png" alt="Logo Pitu v2" />
             <h1>PituLink</h1>
             <span>Cole seu link para encurtar 👇</span>
         </div>

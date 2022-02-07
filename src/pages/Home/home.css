@@ -25,6 +25,10 @@
     font-size: 19px;
 }
 
+.Imglogo {
+    border-radius: 97%;
+}
+
 .area-input{
     width: 540px;
     display: flex;

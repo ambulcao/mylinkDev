@@ -1,11 +1,12 @@
 import { FiLink } from 'react-icons/fi'
+import Img from "../../assets/pitu2.png"
 import './home.css'
 
 export default function Home(){
     return(
       <div className="container-home">
         <div className="logo">
-            <img src="../../assets/pitu2.png" alt="Logo Pitu v2" />
+            <img className='Imglogo' src={Img} />
             <h1>PituLink</h1>
             <span>Cole seu link para encurtar 👇</span>
         </div>

@@ -37,7 +37,11 @@ export default function Home(){
 
         <Menu />
 
-        { showModal && (<LinkItem />) }
+        { showModal && (
+          <LinkItem 
+          closeModal={() => setShowModal(false)}
+          />
+        )}
 
       </div>
     )

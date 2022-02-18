@@ -1,15 +1,16 @@
 import { useState } from 'react';
-import { FiLink } from 'react-icons/fi'
-import Img from "../../assets/pitu2.png"
-import './home.css'
+import { FiLink } from 'react-icons/fi';
+import Img from "../../assets/pitu2.png";
+import './home.css';
 
-import Menu from '../../components/Menu'
-import LinkItem from '../../components/LinkItem'
+import Menu from '../../components/Menu';
+import LinkItem from '../../components/LinkItem';
 
-import api from '../../services/api'
+import api from '../../services/api';
 
 export default function Home(){
   const [link, setLink] = useState('');
+  const [data, setData] = useState({});
   const [showModal, setShowModal] = useState(false);
 
   async function handleShortLink(){
@@ -17,7 +18,10 @@ export default function Home(){
       const response = await api.post('/shorten', {
         long_url: link
       })
-      console.log(response.data);
+      
+      setData(response.data);
+      setShowModal(true);
+      
     }catch{
       alert("Ops parece que algo deu errado!");
       setLink('');

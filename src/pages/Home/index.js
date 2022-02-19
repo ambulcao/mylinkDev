@@ -21,6 +21,8 @@ export default function Home(){
       
       setData(response.data);
       setShowModal(true);
+
+      setLink('');
       
     }catch{
       alert("Ops parece que algo deu errado!");
@@ -47,7 +49,7 @@ export default function Home(){
              />
             </div>
 
-            <button onClick={handleShortLink}>Gerar Link</button>
+            <button onClick={handleShortLink}>Encurtar Link</button>
         </div>
 
         <Menu />

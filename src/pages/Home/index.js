@@ -57,6 +57,7 @@ export default function Home(){
         { showModal && (
           <LinkItem 
           closeModal={() => setShowModal(false)}
+          content={data}
           />
         )}
 

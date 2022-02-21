@@ -4,6 +4,7 @@ import { FiArrowLeft, FiLink, FiTrash } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 
 import { getLinksSave } from '../../services/storeLinks'
+import LinkItem from '../../components/LinkItem/index'
 
 export default function Links() {
 
@@ -25,6 +26,12 @@ export default function Links() {
     getLinks();
   }, [])
 
+  //Mostra modal do link encurtado
+  function handleOpenLink(link){
+    setData(link)
+    setShowModal(true)
+  }
+
   return (
     <div className='links-container'>
 
@@ -37,7 +44,7 @@ export default function Links() {
 
     { myLinks.map( link => (
         <div key={link.id} className='links-item'>
-        <button className='link'>
+        <button className='link' onClick={ () => handleOpenLink(link)}>
           <FiLink size={18} color="#FFF" />
           {link.long_url}
         </button>
@@ -46,6 +53,13 @@ export default function Links() {
         </button>
       </div>
     ))}
+
+      { showModal && (
+        <LinkItem 
+          closeModal={ () => setShowModal(false) }
+          content={data}
+        />
+      )}
 
     </div>
   )

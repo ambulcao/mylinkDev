@@ -9,7 +9,7 @@ export default function Menu(){
                 <BsYoutube color='#FFF' size={24} />
             </a>
             <a className='social' href='https://instagram.com'>
-                <BsInstagram color='#FFF' size={24} />
+                <BsInstagram color='#FFF' size={24} target="_blank"/>
             </a>
             <Link className='menu-item' to="/links">
                 Meus Links

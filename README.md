@@ -8,7 +8,7 @@ Link Shortener Pitu v2.0 in ReactJS
 - LocalStorage
 - API/Axios
 
-<img src="./src/assets/pitu_readme.png>
+<img src="./src/assets/pitu_readme.png">
 
 <hr>
 
